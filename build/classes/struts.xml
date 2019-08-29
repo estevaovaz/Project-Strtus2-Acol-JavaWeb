@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+  <!-- struts 2.3.16.3 has problem of security,needing to set DynamicMethodInvocation=false -->
+  
+  <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+  <constant name="struts.devMode" value="true" />
+
+   <package name="com.acol.estagio.action" extends="struts-default">
+        <action name="cadastrar" class="com.acol.estagio.action.PessoaAction" >
+            <result name="success">/listar.jsp</result>
+        </action>
+        
+         <action name="excluir" class="com.acol.estagio.action.PessoaAction" >
+            <result name="success">/excluir.jsp</result>
+        </action>
+        
+        <action name="editar" class="com.acol.estagio.action.PessoaAction" >
+            <result name="success">/editar.jsp</result>
+        </action>
+
+    </package>
+
+</struts>
